@@ -38,6 +38,8 @@ $hotels = [
     ],
 
 ];
+$parkingFilter = $_GET['parkingFilter'];
+
 
 ?>
 
@@ -54,15 +56,25 @@ $hotels = [
 
 <body>
 
-<h1>Ecco tutti gli hotel con parcheggio:</h1>
 
-<?php foreach ($hotels as $hotel) : ?>
             <div>
-                <?php if ($hotel['parking'] == true) {
-                    echo $hotel['name'];
-                }
+                <?php if ($parkingFilter != null){
+                    echo '<h1>Ecco tutti gli hotel con parcheggio:</h1>';
+                    foreach ($hotels as $hotel) {
+
+                        if ($hotel['parking'] == true) {
+                            
+                           echo $hotel['name'];
+                       }
+                    } 
+
+                }else {
+                    $_GET['parkingFilter'] = false;
+                    
+                    echo 'tutti gli hotel sono al completo';
+                   };
                 ?>
             </div>
-        <?php endforeach; ?></body>
+    </body>
 
 </html>

@@ -39,6 +39,10 @@ $hotels = [
     ],
 
 ];
+$parkingFilter = $_GET['parkingFilter'];
+$_GET['parkingFilter'] = false;
+
+
 
 ?>
 
@@ -110,9 +114,11 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
     </table>
 
     <form action="script.php" >
-        <input type="text" name="parkingFilter" id="parkingFilter" placeholder="Cerca parcheggio">
+        <input type="checkbox" name="parkingFilter" id="parkingFilter">
+        <label for="parkingFilter">parcheggio</label>
         <button type="submit">invia</button>
     </form>
+    
       
 
 
