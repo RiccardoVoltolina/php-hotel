@@ -58,7 +58,7 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
 <body>
     <ul>
         <?php foreach ($hotels as $hotel) : ?>
-            <li><?php echo $hotel['name'] ?></li>
+            <li><?php echo $hotel['name'] . ' - ' . $hotel['description'] . ' - ' . $hotel['parking'] . ' - ' . $hotel['vote'] . ' - ' . $hotel['distance_to_center'] ?></li>
             <?php endforeach; ?>
     </ul>
 </body>
