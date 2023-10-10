@@ -60,7 +60,6 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
 
 <body>
 
-
     <table class="table">
 
         <thead>
@@ -109,6 +108,14 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
             </tr>
         </tbody>
     </table>
+
+    <form action="script.php" >
+        <input type="text" name="parkingFilter" id="parkingFilter" placeholder="Cerca parcheggio">
+        <button type="submit">invia</button>
+    </form>
+      
+
+
 </body>
 
 </html>
