@@ -83,7 +83,15 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
             </tr>
             <tr>
                 <?php foreach ($hotels as $hotel) : ?>
-                    <td><?php echo $hotel['parking'] ?></td>
+
+                    <td>
+                        <?php if ($hotel['parking'] == true) {
+                            echo 'true';
+                        } else {
+                            echo 'false';
+                        }
+                        ?>
+                    </td>
 
                 <?php endforeach; ?>
             </tr>
@@ -104,5 +112,3 @@ Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto 
 </body>
 
 </html>
-
-
